@@ -3,7 +3,8 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
-import Watchlist from "./pages/Watchlist";
+import Watchlist from "./pages/Watchlist.jsx";
+
 import { WatchListProvider } from './context/WatchListContext';
 
 function App() {

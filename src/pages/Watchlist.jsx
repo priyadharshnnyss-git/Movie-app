@@ -9,15 +9,14 @@ const Watchlist = () => {
   const [search, setSearch] = useState("");
   const[selectedGenre, setSelectedGenre] = useState("");
 
-  const filteredMovies = watchlist
-  .filter(
-    (movie) =>(
-      movie.title.toLowerCase().includes(search.toLowerCase()) 
-      
-    ).filter((movie) => {
-      return !selectedGenre || movie.genre_ids.includes(Number(selectedGenre));
-    })
+const filteredMovies = watchlist
+  .filter((movie) =>
+    movie.title.toLowerCase().includes(search.toLowerCase())
   )
+  .filter((movie) =>
+    !selectedGenre || movie.genre_ids.includes(Number(selectedGenre))
+  );
+
   return (
     <div className='p-4 pt-16'>
     <input type="text" placeholder="Search movies... "
